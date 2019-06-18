@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>
+            Ответы
+        </title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>PHP сервер - лучший сервер</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td class="f">
+                        Номер
+                    </td>
+                    <td class="f">
+                        ID теста
+                    </td>
+                    <td class="n">
+                        Название теста
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                    <% lessons.forEach((lesson, index)=>{ %>
+                        <tr>
+                            <td class="f">
+                                <%=index+1%>                     
+                            </td>
+                            <% if(lesson.id) {%>
+                            <td class="n">
+                                <%=lesson.id%>                     
+                            </td>
+                            <% } if(lesson.name){ %>
+                            <td class="n">
+                                <%=lesson.name%>
+                            </td>
+                            <%}%>
+                        </tr>
+                    <%})%>
+            </tbody>
+        </table>
+    </body>
+</html>
